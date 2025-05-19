@@ -155,18 +155,12 @@ export default function StoragePage() {
                 {storageInfo.vms.map((vm: any, index: number) => (
                   <div key={vm.name} className="bg-gray-700/50 rounded-lg p-4 border border-gray-600">
                     <div className="flex justify-between items-center">
-                      <div>
-                        <div className="font-medium text-white">{vm.name}</div>
-                        <div className="text-sm text-gray-400">{formatSize(vm.size)}</div>
-                      </div>
-                      <div className="w-24 bg-gray-600 rounded-full h-2">
-                        <div
-                          className="h-2 rounded-full"
-                          style={{
-                            width: `${(vm.size / storageInfo.total) * 100}%`,
-                            backgroundColor: COLORS[index % COLORS.length],
-                          }}
-                        ></div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }}></div>
+                        <div>
+                          <div className="font-medium text-white">{vm.name}</div>
+                          <div className="text-sm text-gray-400">{formatSize(vm.size)}</div>
+                        </div>
                       </div>
                     </div>
                   </div>

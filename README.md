@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# XCP-ng GUI
 
-## Getting Started
+Une interface graphique moderne pour gérer votre infrastructure XCP-ng. Cette application web permet de gérer facilement vos machines virtuelles, surveiller les ressources et administrer votre serveur XCP-ng.
 
-First, run the development server:
+## Fonctionnalités
 
+- 📊 **Tableau de bord** : Vue d'ensemble de toutes vos machines virtuelles
+- 🖥️ **Gestion des VMs** :
+  - Création de nouvelles machines virtuelles
+  - Démarrage/arrêt des VMs
+  - Suppression de VMs
+  - Visualisation détaillée des ressources (CPU, RAM, stockage)
+- 💾 **Gestion du stockage** :
+  - Vue d'ensemble de l'utilisation du stockage
+  - Graphiques de répartition
+  - Surveillance en temps réel
+- ⚙️ **Configuration** :
+  - Interface de configuration simple pour connecter votre serveur XCP-ng
+  - Gestion des paramètres de connexion
+
+## Prérequis
+
+- Un serveur XCP-ng 8.3 ou supérieur
+- Node.js 18 ou supérieur
+- npm 9 ou supérieur
+- Git
+
+## Installation
+
+1. Clonez le dépôt :
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/votre-username/xcp-gui.git
+cd xcp-gui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Installez les dépendances :
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Lancez l'application en mode développement :
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+L'application sera accessible à l'adresse `http://localhost:3000`
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+1. Accédez à l'application via votre navigateur
+2. Rendez-vous dans la section "Configuration"
+3. Entrez les informations de connexion de votre serveur XCP-ng :
+   - Adresse IP du serveur
+   - Nom d'utilisateur
+   - Mot de passe
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Utilisation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Création d'une VM
 
-## Deploy on Vercel
+1. Cliquez sur "Créer une VM" dans le menu
+2. Remplissez les informations requises :
+   - Nom de la VM
+   - Système d'exploitation (templates disponibles)
+   - Description (optionnel)
+3. Cliquez sur "Créer la VM"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Gestion du stockage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Accédez à la section "Stockage"
+2. Visualisez l'utilisation du stockage via les graphiques
+3. Surveillez l'espace disponible et utilisé
+
+### Surveillance des VMs
+
+1. Sur le tableau de bord, vous pouvez voir l'état de toutes vos VMs
+2. Cliquez sur une VM pour voir ses détails
+3. Gérez l'état de la VM (démarrage/arrêt)
+4. Surveillez les ressources en temps réel
+
+## Technologies utilisées
+
+- Next.js 15
+- React 19
+- TypeScript
+- TailwindCSS
+- Recharts pour les graphiques
+- SSH2 pour la communication avec XCP-ng
