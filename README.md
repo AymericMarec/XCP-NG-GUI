@@ -57,7 +57,6 @@ L'application sera accessible à l'adresse `http://localhost:3000`
 ## Utilisation
 
 ### Création d'une VM
-
 1. Cliquez sur "Créer une VM" dans le menu
 2. Remplissez les informations requises :
    - Nom de la VM
@@ -66,13 +65,11 @@ L'application sera accessible à l'adresse `http://localhost:3000`
 3. Cliquez sur "Créer la VM"
 
 ### Gestion du stockage
-
 1. Accédez à la section "Stockage"
 2. Visualisez l'utilisation du stockage via les graphiques
 3. Surveillez l'espace disponible et utilisé
 
 ### Surveillance des VMs
-
 1. Sur le tableau de bord, vous pouvez voir l'état de toutes vos VMs
 2. Cliquez sur une VM pour voir ses détails
 3. Gérez l'état de la VM (démarrage/arrêt)
@@ -86,3 +83,15 @@ L'application sera accessible à l'adresse `http://localhost:3000`
 - TailwindCSS
 - Recharts pour les graphiques
 - SSH2 pour la communication avec XCP-ng
+
+---
+
+# Documentation Technique
+
+## 1. Architecture
+
+### 1.1 Infrastructure
+
+#### Composants Principaux
+- **Serveur XCP-ng** : Hyperviseur principal
+- **Interface Web** : Application Next.js
