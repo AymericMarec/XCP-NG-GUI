@@ -29,8 +29,8 @@ Une interface graphique moderne pour gérer votre infrastructure XCP-ng. Cette a
 
 1. Clonez le dépôt :
 ```bash
-git clone https://github.com/votre-username/xcp-gui.git
-cd xcp-gui
+git clone https://github.com/AymericMarec/XCP-NG-GUI
+cd XCP-NG-GUI
 ```
 
 2. Installez les dépendances :
