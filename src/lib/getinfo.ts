@@ -4,9 +4,9 @@ import { execSSH } from "@/lib/ssh";
 import type { SSHConfig } from '@/types/config';
 import type { vmInfo,RAMInfo,Stockage  } from '@/types/vm';
 
-export async function GetInfoVMs(config: { ip: string; username: string; password: string }): Promise<VM[]> {
+export async function GetInfoVMs(config: SSHConfig): Promise<VM[]> {
     const { stdout } = await execSSH('xe vm-list', config);
-
+    console.log("test")
     const vms: VM[] = [];
     const blocks = stdout.split('\n\n');
 

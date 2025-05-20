@@ -7,7 +7,6 @@ import type { StorageInfo } from '@/types/stockage'
 
 export async function getStockageTotal(config: SSHConfig): Promise<StorageInfo> {
   const { stdout } = await execScript("get_storage.sh", [], config);
-  console.log(stdout)
   const lines = stdout.trim().split("\n");
 
   let total = 0;

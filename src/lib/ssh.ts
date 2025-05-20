@@ -9,7 +9,7 @@ import path from 'path';
 export async function execSSH(command: string, config: SSHConfig): Promise<{ stdout: string; stderr: string }> {
   return new Promise((resolve, reject) => {
     const conn = new Client()
-
+    console.log(config)
     conn
       .on('ready', () => {
         conn.exec(command, (err, stream) => {
@@ -38,7 +38,7 @@ export async function execSSH(command: string, config: SSHConfig): Promise<{ std
         reject(err);
       })
       .connect({
-        host: config.ip,
+        host: config.host,
         port: 22,
         username: config.username,
         password: config.password,
@@ -83,7 +83,7 @@ export async function execScript(scriptName: string,args: string[],config: SSHCo
       })
       .on('error', (err) => reject(err))
       .connect({
-        host: config.ip,
+        host: config.host,
         port: 22,
         username: config.username,
         password: config.password,

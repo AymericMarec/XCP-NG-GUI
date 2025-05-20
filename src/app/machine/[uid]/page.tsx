@@ -42,7 +42,6 @@ export default function MachineDetail() {
     }
     const fetchStats = async () => {
       const getstats = await getStats(params.uid as string,JSON.parse(config))
-      console.log(getstats)
       setStats(getstats)
       setLoadingStats(false)
     }
@@ -57,7 +56,6 @@ export default function MachineDetail() {
   async function DeleteVM(uid:string){
       const config = JSON.parse(localStorage.getItem('vmConfig') || '{}');
       const { stdout, stderr } = await execScript("destroy_vm.sh",[uid],config)
-      console.log(stdout,stderr)
       if (stdout) {
         router.push('/');
       }

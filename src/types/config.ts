@@ -1,5 +1,5 @@
 export type SSHConfig = {
-  ip: string;
+  host: string;
   username: string;
   password: string;
 }
