@@ -84,14 +84,16 @@ L'application sera accessible à l'adresse `http://localhost:3000`
 - Recharts pour les graphiques
 - SSH2 pour la communication avec XCP-ng
 
----
+## Automatisation
 
-# Documentation Technique
+Le projet inclut plusieurs scripts pour automatiser des tâches courantes :
 
-## 1. Architecture
+### Scripts Disponibles
+- `create_vm.sh` : Création automatisée de machines virtuelles avec arguments
+- `destroy_vm.sh` : Suppression de machines virtuelles
+- `get_storage.sh` : Récupération des informations de stockage
 
-### 1.1 Infrastructure
 
-#### Composants Principaux
+## Composants Principaux
 - **Serveur XCP-ng** : Hyperviseur principal
 - **Interface Web** : Application Next.js
